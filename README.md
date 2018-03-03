@@ -1,4 +1,14 @@
-# Adminerを使ってMySQL, PostgresSQLをサクッと作る
+# 各種ＤＢ環境を作る
+
+### 目的
+  ・手軽にＤＢ作成、破棄ができること
+  ・テーブル作成などの操作が簡単にしたい
+  ・でも容量は軽くしたい
+
+### やったこと
+  DB構築：docker-compose
+  簡単DB操作：adminer
+  メンテ・軽量化：busybox
 
 ### インストール
   `git clone https://github.com/covemause/docker_db_box.git`
