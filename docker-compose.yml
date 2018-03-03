@@ -1,0 +1,45 @@
+version: '2'
+services :
+  mysql_box:
+    image: busybox
+    volumes:
+      - /opt/mysql_box:/var/lib/mysql
+    container_name: mysql_box
+  mysql_db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: demo
+      MYSQL_PASSWORD: demo
+    ports:
+      - "3306:3306"
+    volumes_from:
+      - mysql_box
+    container_name: mysql_db
+
+  postgres_box:
+    image: busybox
+    volumes:
+      - /opt/postgres_box:/var/lib/postgresql/data
+    container_name: postgres_box
+  postgres_db:
+    image: postgres
+    environment:
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: demo
+      POSTGRES_DB: testdb
+    ports:
+      - "5432:5432"
+    container_name: postgres_db
+    volumes_from:
+        - postgres_box
+
+  admin:
+    image: adminer
+    restart: always
+    depends_on:
+      - mysql_box
+      - postgres_box
+    ports:
+      - 8080:8080
