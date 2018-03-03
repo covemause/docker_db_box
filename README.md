@@ -1,4 +1,4 @@
-# Adminerを使ってMysql, Postgresqlをサクッと作る
+# Adminerを使ってMySQL, PostgresSQLをサクッと作る
 
 ### インストール
   `git clone https://github.com/covemause/docker_db_box.git`
