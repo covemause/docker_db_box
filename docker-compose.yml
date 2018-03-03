@@ -43,3 +43,4 @@ services :
       - postgres_box
     ports:
       - 8080:8080
+    container_name: adminer_box
