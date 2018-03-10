@@ -50,3 +50,36 @@ ___
  |:---:|:---:|:---:|:---:|:---:|
  |MySQL|mysql_db|demo|demo|testdb|
  |PostgresSQL|postgres_db|demo|demo|testdb|
+
+___
+
+### Adminer(docker)の日本語化
+ イメージ取得のデフォルトが軽量な英語版なので、各国語対応版にする。
+ （もっと簡単な方法があれば変更します）
+
+#### 1.コンテナに入る
+~~~
+ # docker exec -it adminer_box /bin/sh
+ /var/www/html $
+~~~
+
+#### 2.英語版のadminer.phpを削除する
+~~~
+/var/www/html $ rm -rf adminer.php
+/var/www/html $ ls
+designs            plugin-loader.php  plugins-enabled
+index.php          plugins
+~~~
+
+#### 3.各国語対応のadminer.phpをダウンロードする
+~~~
+ /var/www/html $ curl -fsSL https://github.com/vrana/adminer/releases/download/v4.6.2/adminer-4.6.2.php -o adminer.php
+ /var/www/html $ ls
+adminer.php        index.php          plugins
+designs            plugin-loader.php  plugins-enabled
+~~~
+
+#### 4.コンテナを抜ける
+~~~
+/var/www/html $ exit
+~~~
