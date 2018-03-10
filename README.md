@@ -37,7 +37,7 @@ ___
 ### adminer画面
 `http://{IP}:8080`
 
-<img src="https://github.com/covemause/docker_db_box/blob/master/adminer_demo.JPG" />
+<img src="https://github.com/covemause/documents/blob/master/adminer_demo.JPG" />
 
 ___
 
