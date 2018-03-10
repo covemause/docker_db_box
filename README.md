@@ -83,3 +83,6 @@ designs            plugin-loader.php  plugins-enabled
 ~~~
 /var/www/html $ exit
 ~~~
+
+
+<img src="https://github.com/covemause/documents/blob/master/adminer_demo_jp.JPG" />
