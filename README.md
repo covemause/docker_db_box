@@ -27,6 +27,8 @@ ___
     |- docker-compose.yml
 ~~~
 
+<img src="https://github.com/covemause/documents/blob/master/docker_db_box_image.JPG" />
+
 ___
 
 ### 起動
